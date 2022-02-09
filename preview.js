@@ -15,4 +15,4 @@ const init = (wrp) => {
 
 const initPreviews = () => wrps.forEach(init);
 
-initPreviews()  
+initPreviews()
