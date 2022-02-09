@@ -1,12 +1,24 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0;
   font-family: "Arial", sans-serif;
+}
+
+.container {
+  height: 100%;
+  padding: 0 100px;
+  overflow: hidden;
 }
 
 .documents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  padding: 0;
+  padding: 200px 0 0;
   margin: 0;
   list-style: none;
 }
@@ -36,11 +48,10 @@ a {
     color: #333;
   }
 
-  &__preview {
+  &__preview-img {
     width: 160px;
     height: 220px;
     background-color: purple;
-
   }
 }
 
@@ -48,6 +59,8 @@ a {
   position: relative;
 
   &:hover {
+    z-index: 2;
+
     .document__preview {
       visibility: visible;
       opacity: 1;
@@ -62,4 +75,5 @@ a {
   opacity: 0;
   transform: scale(0.6);
   transition: 500ms;
+  pointer-events: none;
 }
